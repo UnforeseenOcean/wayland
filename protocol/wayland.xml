@@ -1149,7 +1149,7 @@
 
     <!-- Version 3 additions -->
 
-    <request name="set_buffer_scale" since="3">
+    <request name="set_scaling_factor" since="3">
       <description summary="sets the buffer scaling factor">
 	This request sets an optional scaling factor on how the compositor
 	interprets the contents of the buffer attached to the window.
@@ -1168,7 +1168,7 @@
 	a buffer that is larger (by a factor of scale in each dimension)
 	than the desired surface size.
       </description>
-      <arg name="scale" type="int"/>
+      <arg name="scaling_factor" type="fixed"/>
     </request>
    </interface>
 
@@ -1676,7 +1676,7 @@
 	avoid scaling the surface, and the client can supply
 	a higher detail image.
       </description>
-      <arg name="factor" type="int" summary="scaling factor of output"/>
+      <arg name="scaling_factor" type="int" summary="scaling factor of output"/>
     </event>
   </interface>
 
