@@ -30,7 +30,7 @@ extern "C" {
 
 #include <wayland-client.h>
 
-#define WL_EGL_PLATFORM 1
+#define WL_EGL_PLATFORM 2
 
 struct wl_egl_window;
 
@@ -49,6 +49,9 @@ wl_egl_window_resize(struct wl_egl_window *egl_window,
 void
 wl_egl_window_get_attached_size(struct wl_egl_window *egl_window,
 				int *width, int *height);
+
+struct wl_buffer *
+wl_egl_window_take_buffer(struct wl_egl_window *egl_window);
 
 #ifdef  __cplusplus
 }
